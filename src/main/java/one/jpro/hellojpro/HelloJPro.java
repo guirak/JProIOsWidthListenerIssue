@@ -20,6 +20,7 @@ public class HelloJPro extends Application {
         label.setFont(new Font(50));
         label.setAlignment(Pos.CENTER);
         stage.setScene(new Scene(label));
+
         stage.show();
     }
 

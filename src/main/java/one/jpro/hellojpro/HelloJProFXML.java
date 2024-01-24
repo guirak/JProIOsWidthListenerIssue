@@ -34,6 +34,10 @@ public class HelloJProFXML extends JProApplication {
         stage.setTitle("Hello JPro!");
         stage.setScene(scene);
 
+        stage.widthProperty().addListener(observable -> {
+            System.out.println("Width : " + stage.widthProperty().get());
+        });
+
         // open JavaFX window
         stage.show();
     }

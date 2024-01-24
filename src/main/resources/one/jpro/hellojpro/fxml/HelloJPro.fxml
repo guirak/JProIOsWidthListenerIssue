@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.StackPane?>
-<StackPane
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<BorderPane
         xmlns:fx="http://javafx.com/fxml"
         stylesheets="@../css/HelloJPro.css"
         prefWidth="800" prefHeight="600"
         fx:id="root"
         fx:controller="one.jpro.hellojpro.HelloJProFXMLController">
-    <Label text="Hello" styleClass="hello-label"></Label>
-    <ImageView fx:id="logo" fitWidth="300" preserveRatio="true">
-        <Image url="@../img/JPRO_logo_rgb.png"></Image>
-    </ImageView>
-    <Label fx:id="platformLabel" text="Platform: " styleClass="platform-label" StackPane.alignment="BOTTOM_CENTER"></Label>
-</StackPane>
+    <center>
+        <StackPane styleClass="home-page-content-pane">
+            <children>
+                <!--            <AnchorPane fx:id="imagePane">-->
+                <!--               <styleClass>-->
+                <!--                  <String fx:value="image-pane" />-->
+                <!--               </styleClass>-->
+                <!--            </AnchorPane>-->
+                <HBox styleClass="form-pane-and-empty-pane">
+                    <children>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <ScrollPane HBox.hgrow="SOMETIMES" fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER"
+                                    styleClass="form-pane">
+                            <content>
+                                <VBox styleClass="right-pane">
+                                    <children>
+                                        <Label maxWidth="1.7976931348623157E308" text="MMI ONE"/>
+                                        <VBox>
+                                            <children>
+                                                <Label maxWidth="1.7976931348623157E308" styleClass="loading-label"
+                                                       text="Hello"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </HBox>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>

@@ -9,8 +9,8 @@ import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -23,13 +23,13 @@ import java.util.ResourceBundle;
  */
 public class HelloJProFXMLController implements Initializable {
 
-    @FXML
+//    @FXML
     public Label platformLabel;
 
     @FXML
-    protected StackPane root;
+    protected Parent root;
 
-    @FXML
+//    @FXML
     protected Node logo;
 
     protected JProApplication jproApplication;
@@ -37,7 +37,7 @@ public class HelloJProFXMLController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        platformLabel.setText(String.format("Platform: %s", WebAPI.isBrowser() ? "Browser" : "Desktop"));
+//        platformLabel.setText(String.format("Platform: %s", WebAPI.isBrowser() ? "Browser" : "Desktop"));
     }
 
     protected void initLogoAnimation(Node logo) {
@@ -63,6 +63,6 @@ public class HelloJProFXMLController implements Initializable {
 
     protected void init(JProApplication jproApplication) {
         this.jproApplication = jproApplication;
-        initLogoAnimation(this.logo);
+//        initLogoAnimation(this.logo);
     }
 }
